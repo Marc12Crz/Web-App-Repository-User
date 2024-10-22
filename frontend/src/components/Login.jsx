@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"; // Importa Link para manejar la navegación
+import '../FormStyles.css'; // Importamos los estilos compartidos
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -25,31 +27,37 @@ function Login() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="correo">Correo:</label>
-                <input
-                    type="email"
-                    id="correo"
-                    name="correo"
-                    value={formData.correo}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div>
-                <label htmlFor="contraseña">Contraseña:</label>
-                <input
-                    type="password"
-                    id="contraseña"
-                    name="contraseña"
-                    value={formData.contraseña}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+        <div className="form-container">
+            <form className="form" onSubmit={handleSubmit}>
+                <h2 className="form-title">Login</h2>
+                <div className="form-group">
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        value={formData.correo}
+                        onChange={handleChange}
+                        placeholder="Correo"
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <input
+                        type="password"
+                        id="contraseña"
+                        name="contraseña"
+                        value={formData.contraseña}
+                        onChange={handleChange}
+                        placeholder="Contraseña"
+                        required
+                    />
+                </div>
+                <button className="form-button" type="submit">Iniciar Sesión</button>
+                <div className="extra-options">
+                    <p>No tienes cuenta? <Link to="/register">Regístrate</Link></p> {/* Navega a la ruta /register */}
+                </div>
+            </form>
+        </div>
     );
 }
 

@@ -4,16 +4,16 @@ import Register from './components/Register';
 import Welcome from './components/Welcome';
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Welcome />} />        {/* Página de inicio */}
-        <Route path="/login" element={<Login />} />     {/* Ruta para login */}
-        <Route path="/register" element={<Register />} />{/* Ruta para registro */}
-        <Route path="/welcome" element={<Welcome />} /> {/* Ruta para welcome */}
-      </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Login />} /> {/* Página de inicio (Login) */}
+                <Route path="/login" element={<Login />} /> {/* Ruta para login */}
+                <Route path="/register" element={<Register />} /> {/* Ruta para registro */}
+                <Route path="/welcome" element={<Welcome />} /> {/* Ruta para welcome */}
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

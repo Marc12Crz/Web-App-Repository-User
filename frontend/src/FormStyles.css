@@ -1,0 +1,110 @@
+/* Estilos generales para el contenedor del formulario */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/src/assets/background_pf.webp'); /* Fondo personalizado */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos generales para los formularios */
+.form {
+    background-color: #4B8E8D; /* Fondo blanco con transparencia */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 350px; /* Ancho del formulario */
+    max-width: 90%;
+    text-align: center;
+    backdrop-filter: blur(5px); /* Suaviza el fondo detrás */
+}
+
+/* Estilos específicos para el formulario de Register */
+.form.register-form {
+    background-color: #4B8E8D; /* Color distinto para Register */
+    border-radius: 25px;
+    padding: 40px;
+    width: 350px; /* Tamaño adecuado para el formulario de registro */
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de los formularios */
+.form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff; /* Color blanco para el texto */
+}
+
+/* Estilos para los campos de entrada */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+/* Botones */
+.form-button {
+    background-color: #FFA629;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #45a049;
+}
+
+/* Botón específico para Google */
+.form-button.google-button {
+    background-color: #DB4437;
+    width: 100%;
+    margin-bottom: 15px; /* Espacio entre el botón de Google y el de registro */
+}
+
+.form-button.google-button:hover {
+    background-color: #c13b2f;
+}
+
+/* Enlaces adicionales */
+.extra-options {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.extra-options a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.extra-options a:hover {
+    color: #cccccc;
+}
+
