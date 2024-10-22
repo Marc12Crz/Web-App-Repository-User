@@ -1,8 +1,7 @@
 package com.example.integrador.controller;
 
 import com.example.integrador.model.User;
-import com.example.integrador.repository.UserRepository;
-<<<<<<< HEAD
+import com.example.integrador.repository.UserRepository;<<<<<<<HEAD
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.stereotype.Controller;
@@ -13,8 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.security.Principal;
 import java.util.Map;
 
-@Controller
-=======
+@Controller=======
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
@@ -28,8 +26,7 @@ import java.util.Map;
 @Controller // Cambiar a Controller para que las rutas estén bajo el contexto de la
 @RestController // Cambiar a RestController para devolver JSON directamente
 @RequestMapping("/api") // Para que todas las rutas estén bajo '/api'
->>>>>>> ed7ccf5 (Backend con conexion a React)
-public class UserController {
+>>>>>>>ed7ccf5(Backend con conexion a React)public class UserController {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
@@ -39,8 +36,8 @@ public class UserController {
         this.passwordEncoder = new BCryptPasswordEncoder();
     }
 
-<<<<<<< HEAD
-    @GetMapping("/register")
+    <<<<<<<HEAD @GetMapping("/register")
+
     public String showRegistrationForm(Model model, Principal principal) {
         if (principal instanceof OAuth2AuthenticationToken) {
             OAuth2AuthenticationToken authToken = (OAuth2AuthenticationToken) principal;
@@ -96,7 +93,7 @@ public class UserController {
 
     @GetMapping("/login")
     public String showLoginForm() {
-        return "login";  // Retorna la vista del formulario de login
+        return "login"; // Retorna la vista del formulario de login
     }
 
     @PostMapping("/login")
@@ -111,7 +108,6 @@ public class UserController {
         model.addAttribute("nombre", user.getNombre());
         return "welcome"; // Returns the welcome page with the user's name
     }
-
 
     @GetMapping("/welcome")
     public String welcome(Model model, Principal principal) {
@@ -167,22 +163,22 @@ public class UserController {
         return "welcome";
     }
 
-=======
-            User user = userRepository.findByCorreo(correo);
-            if (user != null) {
-                response.put("nombre", user.getNombre());
-            } else {
-                response.put("nombre", (String) attributes.get("name"));
-            }
-        } else if (principal != null) {
-            String correo = principal.getName();
-            User user = userRepository.findByCorreo(correo);
-            if (user != null) {
-                response.put("nombre", user.getNombre());
-            }
-        }
+    =======
 
-        return ResponseEntity.ok(response);
-    }
->>>>>>> ed7ccf5 (Backend con conexion a React)
+    User user = userRepository.findByCorreo(correo);if(user!=null)
+    {
+        response.put("nombre", user.getNombre());
+    }else
+    {
+        response.put("nombre", (String) attributes.get("name"));
+    }}else if(principal!=null){
+    String correo = principal.getName();
+    User user = userRepository.findByCorreo(correo);if(user!=null)
+    {
+        response.put("nombre", user.getNombre());
+    }}
+
+    return ResponseEntity.ok(response);}>>>>>>>ed7ccf5(
+    Backend con
+    conexion a React)
 }

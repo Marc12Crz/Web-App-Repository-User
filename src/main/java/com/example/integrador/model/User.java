@@ -1,10 +1,9 @@
 package com.example.integrador.model;
 
-import jakarta.persistence.*;
-<<<<<<< HEAD
-=======
+import jakarta.persistence.*;<<<<<<<HEAD=======
 
->>>>>>> ed7ccf5 (Backend con conexion a React)
+>>>>>>>ed7ccf5(Backend con conexion a React)
+
 @Table(name = "usuarios")
 @Entity
 public class User {
