@@ -2,15 +2,14 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url('/src/assets/background_pf.webp'); /* Fondo personalizado */
+    height: 100vh; /* Fondo personalizado */
     background-size: cover; /* Cubre toda la pantalla */
     background-position: center;
     background-repeat: no-repeat;
@@ -25,7 +24,7 @@ body, html {
     width: 350px; /* Ancho del formulario */
     max-width: 90%;
     text-align: center;
-    backdrop-filter: blur(5px); /* Suaviza el fondo detrás */
+    backdrop-filter: blur(10px); /* Suaviza el fondo detrás */
 }
 
 /* Estilos específicos para el formulario de Register */
@@ -36,14 +35,15 @@ body, html {
     width: 350px; /* Tamaño adecuado para el formulario de registro */
     text-align: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 /* Títulos de los formularios */
 .form-title {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 20px;
     font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff; /* Color blanco para el texto */
 }
 
@@ -56,7 +56,8 @@ body, html {
 .form-group select {
     width: 100%;
     padding: 12px;
-    border: none;
+    background-color: #4B8E8D;
+    border-color: #fff;
     border-radius: 8px;
     font-size: 14px;
     margin-bottom: 15px;
@@ -78,20 +79,34 @@ body, html {
 }
 
 .form-button:hover {
-    background-color: #45a049;
+    background-color: #f32d09fd;
 }
 
-/* Botón específico para Google */
-.form-button.google-button {
-    background-color: #DB4437;
+
+/* Estilos para el botón de Google */
+.form-button-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFA629; /* Color de Google */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     width: 100%;
-    margin-bottom: 15px; /* Espacio entre el botón de Google y el de registro */
+    margin-top: 10px;
+    text-decoration: none;
 }
 
-.form-button.google-button:hover {
-    background-color: #c13b2f;
+.form-button-google:hover {
+    background-color: #f32d09fd;
 }
 
+.google-icon {
+    width: 20px; /* Ajusta el tamaño del ícono */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
 /* Enlaces adicionales */
 .extra-options {
     margin-top: 10px;
