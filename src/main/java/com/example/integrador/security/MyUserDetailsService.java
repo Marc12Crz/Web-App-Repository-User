@@ -5,7 +5,10 @@ import com.example.integrador.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+<<<<<<< HEAD
 import org.springframework.security.core.userdetails.User.UserBuilder;
+=======
+>>>>>>> ed7ccf5 (Backend con conexion a React)
 import org.springframework.stereotype.Service;
 
 @Service
@@ -26,8 +29,13 @@ public class MyUserDetailsService implements UserDetailsService {
 
         // El password ya debe estar codificado en la base de datos
         return org.springframework.security.core.userdetails.User.withUsername(user.getCorreo())
+<<<<<<< HEAD
                 .password(user.getContraseña())  // Asegúrate de que la contraseña esté codificada
                 .roles("USER")  // Asigna roles si es necesario
+=======
+                .password(user.getContraseña()) // Asegúrate de que la contraseña esté codificada
+                .roles("USER") // Asigna roles si es necesario
+>>>>>>> ed7ccf5 (Backend con conexion a React)
                 .build();
     }
 
