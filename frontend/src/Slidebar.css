@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap');
+
+.de-todo {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+.slide_unico {
+    position: fixed; /* Fija el slidebar a la parte superior de la ventana */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Asegúrate de que cubra toda la pantalla */
+    width: 210px; /* Cambia este valor para ajustar el ancho */
+    background-color: #4B8E8D;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Ajuste de transición */
+    transform: translateX(-250px); /* Posición inicial fuera de la vista */
+    z-index: 1000; /* Asegúrate de que el slidebar esté por encima del contenido */
+    opacity: 0;
+}
+
+.slide_unico.open {
+    transform: translateX(0); /* Mostrar el slidebar */
+    opacity: 1;
+    box-shadow: 0 0 15px #466c6c;
+}
+
+.titulo_unico {
+    color: #ffffff;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
+}
+
+.ul_unico .li_unico {
+    list-style: none;
+}
+
+.ul_unico .li_unico .a_unico {
+    color: #ffffff;
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+.ul_unico .li_unico:hover .a_unico {
+    color: #fff;
+    background-color: #FFA629;
+}
+
+.ul_unico .li_unico .a_unico .icono_unico {
+    width: 40px;
+    text-align: center;
+}
+
+.input_unico {
+    display: none;
+    visibility: hidden;
+}
+
+.toggle_unico {
+    position: relative; /* Fijar el botón de hamburguesa en la esquina superior izquierda */
+    height: 40px; /* Ajuste de altura */
+    width: 40px; /* Ajuste de ancho */
+    top: 0;
+    left: 0;
+    z-index: 1111; /* Asegúrate de que el botón esté encima del slidebar */
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #4B8E8D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    transition: opacity 0.3s ease; /* Transición de desvanecimiento */
+}
+
+.toggle_unico.hide {
+    opacity: 0;
+}
+
+.toggle_unico .comun_unico {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle_unico .topo_unico {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle_unico .medio_unico {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle_unico .bajo_unico {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input_unico:checked ~ .toggle_unico .topo_unico {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 25px;
+}
+
+.input_unico:checked ~ .toggle_unico .bajo_unico {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 25px;
+}
+
+.input_unico:checked ~ .toggle_unico .medio_unico {
+    opacity: 0;
+}
+
+.input_unico:checked ~ .slide_unico {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.input_unico:checked ~ .slide_unico {
+    transform: translateX(0);
+    box-shadow: 0 0 15px #466c6c ;
+}
