@@ -1,0 +1,153 @@
+/* Estilos para el botón del usuario */
+.profile-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative; /* Mantener su posición en el navbar */
+  }
+  
+  /* Estilos para el UserMenu */
+  .user-menu {
+    position: fixed;
+    right: 0;
+    top: 0; /* Ajusta según la altura del navbar */
+    background-color: #4B8E8D;
+    color: #fff;
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px #4B8E8D;
+    transition: transform 0.3s ease;
+  }
+  
+  .user-menu.open {
+    transform: translateX(0);
+  }
+  
+  .user-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .user-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .user-menu li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #FFA629;
+  }  
+
+  .user-menu ul li a {
+    display: block;
+    padding: 10px 20px; /* Ajusta los valores de padding para hacerlo más ancho */
+    text-decoration: none;
+    color: #ffffff; /* Color del texto normal */
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-menu ul li a:hover {
+    background-color: #FFA629; /* El color hover */
+    color: #ffffff; /* Cambia el color del texto en hover */
+    width: 100%; /* Asegúrate de que cubra todo el ancho */
+  }
+  
+
+.user-menu-container {
+    position: relative;
+  }
+  
+  .toggle_button {
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1111;
+    height: 40px;
+    width: 40px;
+    background-color: #4B8E8D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .toggle_button:hover {
+    background-color: #FFA629;
+  }
+  
+  .top_bar, .middle_bar, .bottom_bar {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: 0.3s ease;
+  }
+  
+  .top_bar {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .middle_bar {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .bottom_bar {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Ocultar la barra del medio cuando está abierta */
+  .input_toggle:checked ~ .toggle_button .middle_bar {
+    opacity: 0;
+  }
+  
+  /* Rotar las barras superior e inferior cuando está abierta */
+  .input_toggle:checked ~ .toggle_button .top_bar {
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 25px;
+  }
+  
+  .input_toggle:checked ~ .toggle_button .bottom_bar {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 25px;
+  }
+  
+  .user-menu-title {
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+  }
+  
+  .user-menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-menu-item {
+    margin: 15px 0;
+  }
+  
+  .user-menu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .user-menu-item a:hover {
+    color: #FFA629;
+  }
+  
