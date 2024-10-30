@@ -1,0 +1,79 @@
+.donaciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.donaciones-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #54736b;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.donaciones-header h2 {
+  color: white;
+  margin: 0;
+}
+
+.donaciones-main-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.donaciones-subtitle {
+  color: #54736b;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.donaciones-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.donaciones-product-card {
+  background-color: #54736b;
+  border-radius: 8px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.donaciones-product-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.donar-button {
+  background-color: #fca311;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.donar-button:hover {
+  background-color: #e39400;
+}

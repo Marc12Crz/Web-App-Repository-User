@@ -2,7 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom"; // Importa Link para manejar la navegación
-import '../FormStyles.css'; // Importamos los estilos compartidos
+import '../css/FormStyles.css'; // Importamos los estilos compartidos
 import GoogleIcon from '../assets/google.png'; // Importamos el ícono de Google
 
 function Register() {

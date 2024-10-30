@@ -1,4 +1,4 @@
-import '../PerfilStyles.css'; // Importa los estilos de CSS
+import '../css/PerfilStyles.css'; // Importa los estilos de CSS
 import profileIcon from '../assets/user.png'; // Asegúrate de que el icono esté en la ruta correcta
 
 const Perfil = () => {

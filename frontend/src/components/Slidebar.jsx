@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../Slidebar.css'; // Importar el archivo CSS con los estilos
+import '../css/Slidebar.css'; // Importar el archivo CSS con los estilos
 
 const Slidebar = () => {
   const [isOpen, setIsOpen] = useState(false); // Controla si el slidebar está abierto
@@ -29,6 +29,7 @@ const Slidebar = () => {
           <li className="li_unico"><a className="a_unico" href="/Mascota"><i className="icono_unico fa-sharp fa-solid  fa-paw-simple"></i>Mascotas</a></li>
           <li className="li_unico"><a className="a_unico" href="/Donaciones"><i className="icono_unico fa-solid fa-box-heart"></i>Donaciones</a></li>
           <li className="li_unico"><a className="a_unico" href="/Albergues"><i className="icono_unico fa-duotone fa-solid fa-house-heart"></i>Albergues</a></li>
+          <li className="li_unico"><a className="a_unico" href="/TerminosLegales"><i className="icono_unico fa-sharp fa-solid fa-books"></i>Quienes Somos</a></li>
           <li className="li_unico"><a className="a_unico" href="/TerminosLegales"><i className="icono_unico fa-sharp fa-solid fa-books"></i>Terminos Legales</a></li>
         </ul>
       </div>

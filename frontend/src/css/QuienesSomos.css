@@ -1,0 +1,60 @@
+.quienes-somos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5e9d7; /* Fondo similar al de la imagen */
+  }
+  
+  .section-card {
+    background-color: #4b8e8d; /* Color de fondo verde */
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .section-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .section-image {
+    width: 500px;
+    height: 600px;
+    border-radius: 8px;
+  }
+  
+  .section-description {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  .cta-button {
+    background-color: #ffa629;
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #e69527;
+  }
+  

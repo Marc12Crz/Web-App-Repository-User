@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'; // Importar PropTypes para validar props
 import { Link } from 'react-router-dom';  // Importar Link para la navegación interna
-import '../UserMenuStyles.css'; // Importar los estilos del UserMenu
+import '../css/UserMenuStyles.css'; // Importar los estilos del UserMenu
 
 const UserMenu = ({ isOpen, toggleMenu }) => {
   return (

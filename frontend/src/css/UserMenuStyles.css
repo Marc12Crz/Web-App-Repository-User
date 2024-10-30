@@ -1,11 +1,17 @@
 /* Estilos para el botón del usuario */
 .profile-icon {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    position: relative; /* Mantener su posición en el navbar */
-  }
-  
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: opacity 0.3s ease; /* Transición suave para opacidad */
+}
+
+/* Cuando el menú está abierto, disminuye la opacidad del botón */
+.user-menu.open ~ .profile-icon {
+  opacity: 0.2; /* Ajusta el valor según el nivel de desvanecimiento que prefieras */
+  pointer-events: all; /* Permite que el botón siga siendo funcional */
+}
   /* Estilos para el UserMenu */
   .user-menu {
     position: fixed;

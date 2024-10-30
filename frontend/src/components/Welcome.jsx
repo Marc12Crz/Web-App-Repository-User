@@ -1,5 +1,6 @@
-import '../WelcomeStyle.css'; // Asegúrate de que esta ruta sea correcta
-import Donacion from '../assets/donacion.png';
+import { Link } from 'react-router-dom'; // Importa Link para la navegación
+import '../css/WelcomeStyle.css'; // Asegúrate de que esta ruta sea correcta
+import Donation from '../assets/donacion.png';
 import Adopcion from '../assets/Adopcion.png';
 import Albergue from '../assets/Albergues.png';
 import Quienes_Somos from '../assets/Quienes_somos.png';
@@ -12,11 +13,14 @@ const Welcome = () => {
         <p>Bienvenido a PawFriends</p>
         <button className="view-pets-button">Ver las mascotas</button>
       </div>
-      
+
       <div className="grid-container">
         <div className="grid-item">
-          <img src={Donacion} alt="Donaciones" className="grid-image" />
-          <button className="grid-button">Donaciones</button>
+          <img src={Donation} alt="Donaciones" className="grid-image" />
+          {/* Wrap the Donaciones button with Link */}
+          <Link to="/donaciones">
+            <button className="grid-button">Donaciones</button>
+          </Link>
         </div>
         <div className="grid-item">
           <img src={Adopcion} alt="Encuentro" className="grid-image" />
@@ -28,7 +32,10 @@ const Welcome = () => {
         </div>
         <div className="grid-item">
           <img src={Quienes_Somos} alt="Quiénes somos" className="grid-image" />
-          <button className="grid-button">Quiénes somos</button>
+          {/* Usar Link para redirigir a la página de "Quiénes somos" */}
+          <Link to="/quienes-somos">
+            <button className="grid-button">Quiénes somos</button>
+          </Link>
         </div>
       </div>
     </div>
@@ -36,3 +43,4 @@ const Welcome = () => {
 };
 
 export default Welcome;
+

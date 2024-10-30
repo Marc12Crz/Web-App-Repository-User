@@ -1,5 +1,5 @@
 // src/components/Footer.jsx
-import '../HeaderFooterStyles.css'; // Importamos los estilos
+import '../css/HeaderFooterStyles.css'; // Importamos los estilos
 
 const Footer = () => {
     return (
